@@ -1,5 +1,10 @@
 import 'dart:io';
 
+import 'Options/Add_Item.dart';
+import 'Options/Create_Order.dart';
+import 'Options/Print_Bill.dart';
+import 'Options/Remove_Item.dart';
+
 isCounter () {
   print('Select an option');
   print('1. Create Order');
@@ -8,24 +13,24 @@ isCounter () {
   print('4. Print Bill');
   print('5. Logout');
   String option = stdin.readLineSync()!;
-  bool selectOption = false;
+  bool selectOption = true;
 
-  while (selectOption == false) {
+  while (selectOption == true) {
     if (option == '1') {
-      print('abc');
+      isCreateOrder();
     }
     else if (option == '2') {
-
+      isAddItem();
     }
     else if (option == '3') {
-
+      isRemoveItem();
     }
     else if (option == '4') {
-
+      isPrintBill();
     }
     else if (option == '5') {
     print('Thanks for using Restaurant Management System');
-    selectOption = true;
+    selectOption = false;
     }
   }
 }
