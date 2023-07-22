@@ -1,11 +1,12 @@
 import 'dart:io';
 
 import '../../Menu.dart';
+import '../isCounter.dart';
 
 List<Map> Order = [];
 
 isCreateOrder () {
-  print('Select Category to View Items');
+  print('Select Category to View Items or Press any Key to go back');
   for (var i = 0; i < menu.length; i++) {
     print('${i+1} ${menu[i].keys.first}');
   }
@@ -13,7 +14,7 @@ isCreateOrder () {
   String cSelect = stdin.readLineSync()!;
   int categorySelect = int.parse(cSelect);
 
-  if (categorySelect != null && categorySelect >= 1 && categorySelect <= menu.length) {
+  if (categorySelect >= 1 && categorySelect <= menu.length) {
     Map selectCategory = menu[categorySelect-1];
     String categoryName = selectCategory.keys.first;
     List items = selectCategory.values.first;
@@ -56,7 +57,8 @@ isCreateOrder () {
     }
   }
   else{
-    print('Invalid category. Please select from available category numbers');
+    print('object');
+    isCounter();
   }
 
   print('Order Summary');
