@@ -57,7 +57,6 @@ isCreateOrder () {
     }
   }
   else{
-    print('object');
     isCounter();
   }
 
