@@ -29,9 +29,8 @@ isCounter () {
       isPrintBill();
     }
     else if (option == '5') {
-    print('Thanks for using Restaurant Management System');
-    selectOption = false;
+      print('Thanks for using Restaurant Management System');
+      selectOption = false;
     }
   }
-}
-  
+}  
