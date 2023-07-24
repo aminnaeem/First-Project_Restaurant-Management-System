@@ -30,6 +30,10 @@ void main () {
     }
     else{
         print('Incorrect Username or Password');
+        print('Enter your Username again');
+        userName;
+        print('Enter your Password');
+        password;
     }
   }
   if (userName == userRecord[1]['Username']) {
