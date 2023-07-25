@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'Admin/isAdmin.dart';
 import 'Counter/isCounter.dart';
 
 List<Map> userRecord = [
@@ -31,12 +32,18 @@ void main () {
     else{
         print('Incorrect Username or Password');
         print('Enter your Username again');
-        userName;
+        userName = stdin.readLineSync()!;
         print('Enter your Password');
-        password;
+        password = stdin.readLineSync()!;
     }
+  }
+  if (userName == userRecord[0]['Username']) {
+    isAdmin();
   }
   if (userName == userRecord[1]['Username']) {
     isCounter();
+  }
+  if (userName == userRecord[2]['Username']) {
+    ;
   }
 }
