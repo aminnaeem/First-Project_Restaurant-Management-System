@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'Options/Add_Item.dart';
-import 'Options/Create_Order.dart';
-import 'Options/Print_Bill.dart';
-import 'Options/Remove_Item.dart';
+import 'Functions/Add_Item.dart';
+import 'Functions/Create_Order.dart';
+import 'Functions/Print_Bill.dart';
+import 'Functions/Remove_Item.dart';
 
 isCounter () {
   print('Select an option');
