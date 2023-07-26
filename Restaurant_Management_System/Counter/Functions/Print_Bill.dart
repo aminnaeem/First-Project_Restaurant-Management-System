@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import '../isCounter.dart';
 import 'Create_Order.dart';
 
 DateTime now = DateTime.now();
@@ -45,8 +46,11 @@ isPrintBill () {
     print('Thanks for Visiting Spicy Tonight');
     print('');
     print('Press any key to Main Menu');
-  
-    String? rtn = stdin.readLineSync(); 
     bill = true;
+  }
+
+  String? rtn = stdin.readLineSync(); 
+  if (rtn == null || rtn != null) {
+    isCounter();
   }
 }
