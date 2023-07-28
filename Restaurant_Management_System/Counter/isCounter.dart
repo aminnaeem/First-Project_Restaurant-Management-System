@@ -6,16 +6,18 @@ import 'Functions/Print_Bill.dart';
 import 'Functions/Remove_Item.dart';
 
 isCounter () {
-  print('Select an option');
-  print('1. Create Order');
-  print('2. Add item to Existing Order');
-  print('3. Remove item from Existing Order');
-  print('4. Print Bill');
-  print('5. Logout');
-  String option = stdin.readLineSync()!;
-  bool selectOption = true;
+  
+  bool logOut = false;
 
-  while (selectOption == true) {
+  while (!logOut) {
+    print('Select an option');
+    print('1. Create Order');
+    print('2. Add item to Existing Order');
+    print('3. Remove item from Existing Order');
+    print('4. Print Bill');
+    print('5. Logout');
+    String option = stdin.readLineSync()!;
+  
     if (option == '1') {
       isCreateOrder();
     }
@@ -26,11 +28,11 @@ isCounter () {
       isRemoveItem();
     }
     else if (option == '4') {
-      isPrintBill();
+      isPrintBill();  
     }
     else if (option == '5') {
+      logOut = true;
       print('Thanks for using Restaurant Management System');
-      selectOption = false;
     }
   }
-}  
+}
